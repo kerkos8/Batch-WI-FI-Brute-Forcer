@@ -395,7 +395,9 @@
 			if %%a==SSID (
 				set /a keynumber=!keynumber! + 1
 				set current_ssid=%%d
-
+                                if "!current_ssid"=="" (
+set "current_ssid=Skrytá_sieť"
+(
 				call :character_finder_2 "!current_ssid!"
 
 			)
